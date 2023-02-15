@@ -67,7 +67,7 @@ ORDER BY
 # I am Data Analyst working at CDHealthcare. I have been tasked with recommending three Primary Care Providers (PCPs) #
 # with good customer service for interviews by the operations team to improve our customer experience.                 #
 #######################################################################################################################
-[Presentation Here](#)
+[Presentation Here](https://github.com/ChristineCYin/Healthcare_Data_Analysis/blob/main/Best%20PCP.pdf)
 
 ## Slide 3 - Overview of Active Member ##
 # How many active memebers (who have a PCP) in each individual month in 2018
