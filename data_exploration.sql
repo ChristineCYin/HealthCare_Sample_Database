@@ -67,7 +67,7 @@ ORDER BY
 # For every individual month in 2018, how many members have a PCP?
 -- The first step is to convert the start and end dates of the member_provider table to the date data type
 -- Join provider table to determine if a member has a PCP
-WITH converted_date_pcp_spans AS (
+WITH converted_date_spans AS (
   SELECT
     -- member_pcp_span's table
     mp.id,
@@ -139,9 +139,9 @@ ORDER BY
   bucketFirstDay 
   
 
-# How many members have a PCP in FL in November?
+# How many members have a PCP in ID in October?
 -- Reuse #6 temporary table, add in provider states
-  WITH converted_date_pcp_spans AS (
+  WITH converted_date_spans AS (
     SELECT
       mp.id,
       mp.member_id,
@@ -164,7 +164,7 @@ ORDER BY
       cd_healthcare.member_provider mp
       LEFT JOIN cd_healthcare.providers p ON mp.provider_id = p.id
   ) 
--- calculate the total number of members with PCP in FL in November
+-- calculate the total number of members with PCP in ID in November
 SELECT
   (
     (
@@ -173,18 +173,18 @@ SELECT
       FROM
         converted_date_pcp_spans
       WHERE
-        converted_start_date <= '2018-11-30'
+        converted_start_date <= '2018-10-31'
         AND provider_is_pcp = 1
-        AND provider_states = 'FL'
+        AND provider_states = 'ID'
     ) -(
       SELECT
         COUNT(member_id)
       FROM
         converted_date_pcp_spans
       WHERE
-        converted_end_date < '2018-11-01'
+        converted_end_date < '2018-10-01'
         AND provider_is_pcp = 1
-        AND provider_states = 'FL'
+        AND provider_states = 'ID'
     )
   ) AS membersCount 
   
@@ -192,7 +192,7 @@ SELECT
   
 # How many members are currently (as of 12/31/18) seeing a provider practicing outside of the member’s city?
 -- Reuse #6 temp table add in provider's city and member's city
-  WITH converted_date_pcp_spans AS (
+  WITH converted_date_spans AS (
     SELECT
       mp.id,
       mp.member_id,
@@ -241,7 +241,7 @@ SELECT
   ) AS membersCount 
   
 
-# Create a complete view for the member_provider table (
+# Create a complete view for the member_provider table (member_provider_converted)
 -- Timestamp data type; city and states separated
 SELECT
   mp.id AS spans_id,
