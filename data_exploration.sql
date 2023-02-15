@@ -147,7 +147,6 @@ ORDER BY
 
 ## Rest of the slides ##
 -- Create temp tables of all tables for the rest of the analysis (Timestamp data type converted; city and states separated)
-
 WITH converted_all AS (
   SELECT
     mp.id AS spans_id,
@@ -178,6 +177,7 @@ WITH converted_all AS (
     LEFT JOIN cd_healthcare.providers p ON mp.provider_id = p.id
     LEFT JOIN cd_healthcare.members m ON mp.member_id = m.id
 ) 
+
 
 ## Slide 4 - Distribution of Current Active Member by State ##
 -- currently (as of 12/31/18) 
@@ -226,7 +226,7 @@ ORDER BY
   CSAT DESC 
   
 
-## Slide 6 - CSAT by Provider ##
+## Slide 7 - CSAT by Provider ##
 -- Top 5 CSAT of each states by provider
 SELECT
   *
