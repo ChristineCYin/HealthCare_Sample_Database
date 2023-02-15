@@ -177,7 +177,6 @@ WITH converted_all AS (
     cd_healthcare.member_provider mp
     LEFT JOIN cd_healthcare.providers p ON mp.provider_id = p.id
     LEFT JOIN cd_healthcare.members m ON mp.member_id = m.id
-
 ) 
 
 ## Slide 4 - Distribution of Current Active Member by State ##
@@ -225,3 +224,55 @@ GROUP BY
   1
 ORDER BY
   CSAT DESC 
+  
+
+## Slide 6 - CSAT by Provider ##
+-- Top 5 CSAT of each states by provider
+SELECT
+  *
+FROM
+  (
+    SELECT
+      *,
+      ROW_NUMBER() OVER (
+        PARTITION BY provider_states
+        ORDER BY
+          CSAT DESC
+      ) AS ROW
+    FROM
+      (
+        SELECT
+          provider_id,
+          provider_states,
+          SUM(
+            CASE
+              WHEN pcp_rating = 5 THEN 1
+              ELSE 0
+            END
+          ) AS Total_five_rating,
+          COUNT(pcp_rating) AS total_give_rating,
+          COUNT(DISTINCT member_id) AS Total_member,
+          SUM(
+            CASE
+              WHEN pcp_rating = 5 THEN 1
+              ELSE 0
+            END
+          ) * 100.0 / COUNT(pcp_rating) AS CSAT,
+          AVG(pcp_rating) AS avg_rating
+        FROM
+          converted_all
+        WHERE
+          converted_end_date > '2018-12-01' :: date
+          AND provider_id IS NOT NULL
+        GROUP BY
+          1,
+          2
+        ORDER BY
+          2,
+          6 DESC
+      ) A
+  ) B
+WHERE
+  ROW <= 5
+
+
