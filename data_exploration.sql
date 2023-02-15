@@ -190,8 +190,7 @@ SELECT
   
 
   
-# How many members are currently (as of 12/31/18) seeing a provider practicing outside
--- of the member’s city?
+# How many members are currently (as of 12/31/18) seeing a provider practicing outside of the member’s city?
 -- Reuse #6 temp table add in provider's city and member's city
   WITH converted_date_pcp_spans AS (
     SELECT
@@ -241,6 +240,37 @@ SELECT
     )
   ) AS membersCount 
   
+
+# Create a complete view for the member_provider table (
+-- Timestamp data type; city and states separated
+SELECT
+  mp.id AS spans_id,
+  mp.member_id,
+  mp.provider_id,
+  mp.plan_id,
+  (
+    20 || LEFT(mp.start_date, 2) || '-' || SUBSTR(mp.start_date, 3, 2) || '-' || RIGHT(mp.start_date, 2)
+  ) :: date AS converted_start_date,
+  CASE
+    WHEN mp.end_date = '999999' THEN '9999-01-01' :: date
+    ELSE (
+      20 || LEFT(mp.end_date, 2) || '-' || SUBSTR(mp.end_date, 3, 2) || '-' || RIGHT(mp.end_date, 2)
+    ) :: date
+  END AS converted_end_date,
+  mp.average_copay,
+  mp.pcp_rating,
+  p.name AS provider_name,
+  SPLIT_PART(p.city, ', ', 1) AS provider_city,
+  SPLIT_PART(p.city, ', ', 2) AS provider_states,
+  m.name AS member_name,
+  SPLIT_PART(m.city, ', ', 1) AS member_city,
+  SPLIT_PART(m.city, ', ', 2) AS member_states,
+  m.birth_date,
+  m.health_risk_score
+FROM
+  cd_healthcare.member_provider mp
+  LEFT JOIN cd_healthcare.providers p ON mp.provider_id = p.id
+  LEFT JOIN cd_healthcare.members m ON mp.member_id = m.id
 
 
 
