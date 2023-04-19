@@ -7,7 +7,7 @@ This is a HealthCare Sample Database representing CDHealthcare, a healthcare com
 All members who have been active at CDHealthcare, with each member being assigned a unique ID.
 
 | Column        | Type           | Description  |
-| :------: | :------:|  :--------- |
+| ------------- | :------:|  :--------- |
 | id      | integer | Unique member id |
 | name      | text      |  member name |
 | city | text      |    City in which the member lives |
