@@ -63,10 +63,11 @@ GROUP BY
 ORDER BY
   1;
 
-#######################################################################################################################
-# I am Data Analyst working at CDHealthcare. I have been tasked with recommending three Primary Care Providers (PCPs) #
-# with good customer service for interviews by the operations team to improve our customer experience.                #
-#######################################################################################################################
+#################################################################################################################################
+# Analysis - top five PCPs
+# The operations team is interested in interviewing the top five PCPs who provide the best customer service to their patients.  #
+# Conduct an analysis to identify the top five PCPs.                                                                            #
+#################################################################################################################################
 [Presentation Here](https://github.com/ChristineCYin/Healthcare_Data_Analysis/blob/main/Best%20PCP.pdf)
 
 ## Slide 3 - Overview of Active Member ##
