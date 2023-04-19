@@ -1,8 +1,8 @@
 # Database Description
 
-This is a HealthCare Sample Database representing CDHealthcare, a healthcare company, consisting of three tables: `Members`, `Providers`, and `Member_Provider`.
+This is a HealthCare Sample Database representing CDHealthcare, a healthcare company, consisting of three tables: `members`, `providers`, and `member_provider`.
 
-## Table `Members`
+## Table `members`
 
 All members who have been active at CDHealthcare, with each member being assigned a unique ID.
 
@@ -16,7 +16,7 @@ All members who have been active at CDHealthcare, with each member being assigne
 
 
 
-## Table `Providers`
+## Table `providers`
 All providers who have a contract with CDHealthcare, and each provider has been assigned a unique ID.
 
 | Column        | Type           | Descr  |
@@ -26,7 +26,7 @@ All providers who have a contract with CDHealthcare, and each provider has been 
 | city | text      |    City in which the provider practices |
 | is_pcp | integer      |  If the provider is a Primary Care Provider (PCP),<br>  the value is 1; otherwise, it is 0.|
 
-## Table `Member_Provider`
+## Table `member_provider`
 This table includes information about the CDHealthcare plan, the relationships between members and their Primary Care Providers (PCPs), and the start and end dates of these relationships, with each relationship being assigned a unique ID. 
 At the end of the calendar year, or if the member changes providers or plans, the member can choose to report the average copay they paid for visits to their current provider and/or rate their provider on a scale of 1 to 5.
 
