@@ -32,7 +32,7 @@ At the end of the calendar year, or if the member changes providers or plans, th
 
 
 | Column        | Type           | Descr  |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:| :-----|
 | id      | integer | Unique member&pcp relationship id |
 | member_id      | integer | Unique member id |
 | provider_id      | integer | Unique provider id |
