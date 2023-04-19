@@ -32,7 +32,7 @@ SELECT
 FROM
   cd_healthcare.providers;
 ```
-![image.png](attachment:image.png) 
+![image](https://user-images.githubusercontent.com/28497315/233212052-3b056add-d2d1-4063-a7bc-21d6a2d677d7.png) 
 
 ###  How many specialists (non-PCPs) are in the directory?
 ``` mysql
