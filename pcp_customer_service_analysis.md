@@ -73,7 +73,7 @@ SELECT bucketName,
           )) AS membersCount
 FROM monthBucket
 ORDER BY bucketFirstDay
-)
+
 -- end
 ```
 ![image](https://user-images.githubusercontent.com/28497315/233465481-b9a89898-cb14-4bd1-a519-9636621529d8.png)
@@ -172,7 +172,8 @@ ORDER BY CSAT DESC;
 - The highest CSAT rating is ID(Idaho) of 15.2, followed by FL(Florida) and AK(Alaska). 
 
 ### CSAT by Provider
-
+Top 5 CSAT of each states by provider
+ 
 ``` mysql
 SELECT *
 FROM
