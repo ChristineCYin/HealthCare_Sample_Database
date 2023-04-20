@@ -13,7 +13,8 @@ This is a HealthCare Sample Database representing CDHealthcare, a healthcare com
 ## PCP Customer Service Analysis
 The operations team is interested in interviewing the top five PCPs who provide the best customer service to their patients.
 Conduct an analysis to identify the top five PCPs and provide recommendations.
-<!-- [Markdown](#)
--->
+
+[PCP Customer Service Analysis](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/pcp_customer_service_analysis.md)
+ 
  - [SQL](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/pcp_customer_service_analysis.sql)
- - [PDF](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/Best%20PCP.pdf)
+ - [PDF](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/pcp_customer_service_analysis.pdf)
