@@ -66,9 +66,8 @@ ORDER BY
 #################################################################################################################################
 # PCP Customer Service Analysis:
 # The operations team is interested in interviewing the top five PCPs who provide the best customer service to their patients.  #
-# Conduct an analysis to identify the top five PCPs.                                                                            #
+# Conduct an analysis to identify the top five PCPs and provide recommendations.                                                                            #
 #################################################################################################################################
-[Presentation Here](https://github.com/ChristineCYin/Healthcare_Data_Analysis/blob/main/Best%20PCP.pdf)
 
 ## Slide 3 - Overview of Active Member ##
 # How many active memebers (who have a PCP) in each individual month in 2018
