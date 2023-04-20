@@ -8,7 +8,7 @@ This is a HealthCare Sample Database representing CDHealthcare, a healthcare com
 -->
 
 ## Explore Database
-[Basic Queries](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/Basic%20Queries.md)
+[Basic Queries](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/basic_queries.md)
 
 ## PCP Customer Service Analysis
 The operations team is interested in interviewing the top five PCPs who provide the best customer service to their patients.
