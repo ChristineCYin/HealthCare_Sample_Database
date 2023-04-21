@@ -16,4 +16,4 @@ Conduct an analysis to identify the top five PCPs and provide recommendations.
 - [PCP Customer Service Analysis](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/pcp_customer_service_analysis.md)
 
   - [SQL](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/pcp_customer_service_analysis.sql)
-  - [Presentation pdf](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/pcp_customer_service_analysis.pdf)
+  - [Presentation](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/pcp_customer_service_analysis.pdf)
