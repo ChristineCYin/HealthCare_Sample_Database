@@ -11,7 +11,7 @@ All members who have been active at CDHealthcare, with each member being assigne
 | id      | integer | Unique member id |
 | name      | text      |  member name |
 | city | text      |    City in which the member lives |
-| birth_date | text      |    member's birth date |
+| birth_date | timestamp      |    member's birth date |
 | health_risk_score | real      |    A risk score is assigned to each member <br> by the Centers for Medicare and Medicaid Services, <br> with higher scores indicating a greater risk level for the member. |
 
 
