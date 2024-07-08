@@ -5,6 +5,8 @@ This is a HealthCare Sample Database representing CDHealthcare, a healthcare com
 
 - [Field Descriptions](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/field_descriptions.md)
 - [Entity Relationship Diagram (ERD)](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/healthcare_sample_database_ER.jpeg)
+![image](https://github.com/ChristineCYin/HealthCare_Sample_Database/assets/28497315/3be3f209-a976-4a9b-9ab3-688358d8513c)
+
 
 ## Explore the Database
 - [Basic Queries](https://github.com/ChristineCYin/HealthCare_Sample_Database/blob/main/basic_queries.md)
